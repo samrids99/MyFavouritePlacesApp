@@ -43,8 +43,7 @@ function ImagePicker() {
       aspect: [16, 9],
       quality: 0.5,
     });
-
-    setPickedImage(image.uri);
+    setPickedImage(image.assets[0].uri);
   }
 
   let imagePreview = <Text>No Image Taken...</Text>;
