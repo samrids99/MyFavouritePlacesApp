@@ -98,5 +98,6 @@ const stlyes = StyleSheet.create({
   mapPreviewImage: {
     width: "100%",
     height: "100%",
+    borderRadius: 4,
   },
 });
