@@ -30,8 +30,8 @@ function Map({ navigation }) {
     }
 
     navigation.navigate("AddPlace", {
-      pickedLat: selectedLocation.latitude,
-      pickedLng: selectedLocation.longitude,
+      pickedLat: selectedLocation.lat,
+      pickedLng: selectedLocation.lng,
     });
   }, [navigation, selectedLocation]);
 
