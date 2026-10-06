@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Colors } from "../../constants/colour";
 import OutlinedButton from "../UI/OutlinedButton";
 
-function ImagePicker() {
+function ImagePicker({ onTakeImage }) {
   const [cameraPermissionInformation, requestPermission] =
     useCameraPermissions();
 
@@ -45,6 +45,8 @@ function ImagePicker() {
       quality: 0.5,
     });
     setPickedImage(image.assets[0].uri);
+    // this is for the PlaceForm component
+    onTakeImage(image.assets[0].uri);
   }
 
   let imagePreview = <Text>No Image Taken...</Text>;
