@@ -26,7 +26,6 @@ function LocationPicker() {
 
   useEffect(() => {
     if (isFocused && route.params) {
-      console.log("route params", route.params);
       const mapPickedLocation = {
         lat: route.params.pickedLat,
         lng: route.params.pickedLng,
@@ -75,8 +74,6 @@ function LocationPicker() {
   let locationPreview = <Text>No location picked yet...</Text>;
 
   if (pickedLocation) {
-    const uri = getMapPreview(pickedLocation.lat, pickedLocation.lng);
-    console.log("Preview URL:", uri);
     locationPreview = (
       <Image
         style={stlyes.mapPreviewImage}
