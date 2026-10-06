@@ -32,13 +32,13 @@ export default function App() {
                   icon="add"
                   size={24}
                   colour={tintColor}
-                  onPress={() => navigation.navigate("Add Place")}
+                  onPress={() => navigation.navigate("AddPlace")}
                 />
               ),
             })}
           />
           <Stack.Screen
-            name="Add Place"
+            name="AddPlace"
             component={AddPlace}
             options={{
               title: "Add a new place",
