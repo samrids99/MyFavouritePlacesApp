@@ -6,7 +6,7 @@ function AddPlace({ navigation }) {
     console.log("handler called", place);
     try {
       await insertPlace(place);
-      navigation.popTo("AllPlaces", { place });
+      navigation.popTo("AllPlaces");
     } catch (err) {
       console.log("insert failed:", err);
     }
