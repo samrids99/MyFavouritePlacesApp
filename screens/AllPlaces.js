@@ -9,7 +9,6 @@ function AllPlaces({ route }) {
 
   useEffect(() => {
     const place = route.params?.place;
-    console.log("placeyboo", place);
     if (isFocused && place) {
       setLoadedPlaces((currPlaces) => [...currPlaces, place]);
     }
