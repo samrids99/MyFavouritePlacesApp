@@ -83,6 +83,7 @@ export default function App() {
             component={PlaceDetails}
             options={{
               headerBackButtonDisplayMode: "minimal",
+              title: "Place Loading...",
             }}
           />
         </Stack.Navigator>

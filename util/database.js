@@ -43,6 +43,27 @@ export async function fetchPlaces() {
       ),
     );
   }
-  console.log("places", places);
   return places;
+}
+
+export async function fetchPlaceDetails(id) {
+  const result = await database.getFirstAsync(
+    "SELECT * FROM places WHERE id = ?",
+    [id],
+  );
+
+  if (!result) {
+    return null;
+  }
+
+  const placeDetails = new Place(
+    result.title,
+    result.imageUri,
+    { address: result.address, lat: result.lat, lng: result.lng },
+    result.id,
+  );
+
+  console.log("placeDetails", placeDetails);
+
+  return placeDetails;
 }
